@@ -1,0 +1,55 @@
+<ion-view  hide-nav-bar="true" class="account_content">
+      <ion-content class="splash padding">
+           <!-- Tab 1 content -->
+		   	<div class="col-100 center" dir="rtl">
+		   		
+				<img class="small-image" src="img/logo.png">
+
+				<p>עבודה עברית</p>
+
+				
+
+				<button style="margin-top:50px;"class="button button-block button-positive">התחבר עם facebook</button>
+					
+
+				<p>או</p>
+
+ 				<form name="loginForm" novalidate="" ng-submit="login(username , password)">
+				
+					<label class="item item-input"  
+					   ng-class="{ 'has-error' : signinForm.username.$invalid}">
+					
+					<i class="icon ion-person padding"></i>
+					<span class="input-label">אימייל</span>  
+					<input type="email"  
+					   name="username"
+					   ng-model="username"
+					   required>
+					</label>
+
+
+					<label class="item item-input"  
+					   ng-class="{ 'has-error' : signinForm.username.$invalid}">
+					
+					<i class="icon ion-person padding"></i>
+					<span class="input-label">סיסמא</span>  
+					<input type="password"  
+					   name="password"
+					   ng-model="password"
+					   ng-minlength="5" 
+					   ng-maxlength="10" 
+					   required>
+					</label>
+
+				
+					<button class="button button-block button-assertive">התחבר</button></a>
+
+
+
+				<p>אין לך חשבון <a href="#/register">הירשם</a></p>
+
+
+				{{error}}
+
+      </ion-content>
+</ion-view>
